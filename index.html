@@ -1,34 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Student Portfolio</title>
-      <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
-      <header>
-         <h1 id="name">Student Name</h1>
-         <img src="profile.jpg" alt="Profile Picture" id="profile-img">
-         <p id="course-year">Course - Year</p>
-         <button id="theme-toggle">Switch Theme</button>
-      </header>
-      <section id="achievements">
-         <h2>Achievements/Certifications</h2>
-         <ul>
-            <li>Achievement 1</li>
-            <li>Achievement 2</li>
-            <li>Achievement 3</li>
-         </ul>
-      </section>
-      <section id="projects">
-         <h2>Previous Projects</h2>
-         <ul>
-            <li>Project 1</li>
-            <li>Project 2</li>
-            <li>Project 3</li>
-         </ul>
-      </section>
-      <script src="script.js"></script>
-   </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keith Flores</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+
+<body>
+    <div class="header"><!--header-->
+        <div class="title">Keith Flores</div><!--title-->
+
+        <div class="info-grid">
+            <div class="Home">Home</div>
+            <a href="about.html">
+                <div class="About">About</div>
+            </a>
+            <div class="Skills">Skills</div>
+            <div class="Education">Education</div>
+            <div class="Work">Work</div>
+            <div class="Experience">Experience</div>
+            <div class="Contact">Contact</div>
+        </div>
+    </div>
+
+
+    <div class="combine-grid">
+         <div class="description-info">
+          <div>
+        <div>
+            <h1 class="greet">Hi There,</h1>
+            <h1 class="name">I'm Keith <span class="flores">Flores</span></h1>
+            <h3 class="details">an Aspiring Front End Developer</h3>
+            <a href="about.html">
+                <button class="btn-about">About Me</button>
+            </a>
+            
+        </div>
+
+        <div class="icons-flex">
+            <div class="icons-grid">
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-solid fa-envelope"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-github"></i>
+            </div>
+            
+        </div>
+        
+    </div>
+    </div>
+    
+
+    <div><!--profPic-->
+        <img class="prof-pic" src="thumbnails/profpic.jpg" alt="">
+    </div>
+
+    </div>
+   
+  
+</body>
+
+
+
 </html>
