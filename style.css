@@ -21,6 +21,7 @@ button {
 	padding: 10px 20px;
 	margin-top: 10px;
 	cursor: pointer;
+	border-radius: 30px;
 }
 
 /* Dark Theme */
