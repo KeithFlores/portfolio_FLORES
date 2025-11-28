@@ -31,7 +31,7 @@ const toggleVideo = () => {
         bgVideo.pause();
         bgVideo.currentTime = 0;
         bgVideo.style.opacity = '0';
-        videoToggleBtn.textContent = "Show Video Background";
+        videoToggleBtn.textContent = "An inspirational video for future successful programmers";
 
         header.style.opacity = '1';
         header.style.pointerEvents = 'auto';
