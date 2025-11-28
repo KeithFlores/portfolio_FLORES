@@ -36,7 +36,8 @@ button {
 	border-radius: 30px;
     transition: box-shadow 0.40s, linear-gradient 0.40s;
     border: none;
-    background-color: lightblue;
+    color: white;
+      background: linear-gradient(270deg, #0f0c29, #302b63, #24243e, #0f0c29);
 }
 
 button:hover{
@@ -45,17 +46,14 @@ button:hover{
     cursor: pointer;
 }
 
-
 body.dark {
-	background-color: #121212;
-	color: #f5f5f5;
+    background: linear-gradient(270deg, #0f0c29, #302b63, #24243e, #0f0c29);
+    background-size: 2000% 2000%;
+    animation: wave 15s linear infinite;
+    color: #f5f5f5;
 }
 .all{
     display: flex;
     justify-content: center;
     gap: 50px;
 }
-
-
-
-
