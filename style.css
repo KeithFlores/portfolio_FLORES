@@ -117,3 +117,77 @@ body.video-active #exit-video-btn {
     pointer-events: auto; 
     background: rgba(255, 0, 0, 0.7); 
 }
+
+
+
+@media (max-width: 1024px) {
+    .all {
+        flex-direction: column;  
+        gap: 30px;
+        align-items: center;
+        padding: 10px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    #course-year {
+        font-size: 1rem;
+    }
+    
+    #profile-img {
+        width: 120px;
+    }
+    
+    button {
+        padding: 8px 16px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    #course-year {
+        font-size: 0.95rem;
+    }
+    
+    #profile-img {
+        width: 100px;
+    }
+    
+    .all {
+        gap: 20px;
+    }
+    
+    button {
+        padding: 7px 14px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    #course-year {
+        font-size: 0.85rem;
+    }
+    
+    #profile-img {
+        width: 80px;
+    }
+    
+    .all {
+        gap: 15px;
+    }
+    
+    button {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+}
