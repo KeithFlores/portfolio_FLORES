@@ -1,10 +1,9 @@
-/* Default Light Theme */
 body {
     font-family: Arial, sans-serif;
-	background-color: #f5f5f5;
-	color: #333;
-	margin: 0;
-	padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 20px;
     min-height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
@@ -20,24 +19,24 @@ body {
 }
 
 header {
-	text-align: center;
-	margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+    transition: opacity 0.5s ease;
 }
-
 #profile-img {
-	width: 150px;
-	border-radius: 50%;
+    width: 150px;
+    border-radius: 50%;
 }
 
 button {
-	padding: 10px 20px;
-	margin-top: 10px;
-	cursor: pointer;
-	border-radius: 30px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 30px;
     transition: box-shadow 0.40s, linear-gradient 0.40s;
     border: none;
     color: white;
-      background: linear-gradient(270deg, #0f0c29, #302b63, #24243e, #0f0c29);
+    background: linear-gradient(270deg, #0f0c29, #302b63, #24243e, #0f0c29);
 }
 
 button:hover{
@@ -45,6 +44,7 @@ button:hover{
     background: linear-gradient(45deg, #8a2be2, #00c6ff);
     cursor: pointer;
 }
+
 
 body.dark {
     background: linear-gradient(270deg, #0f0c29, #302b63, #24243e, #0f0c29);
@@ -56,4 +56,71 @@ body.dark {
     display: flex;
     justify-content: center;
     gap: 50px;
+    transition: opacity 0.5s ease;
+}
+
+
+
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    object-fit: contain; 
+    
+    z-index: -1;       
+    opacity: 0;         
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    
+
+    display: none; 
+}
+
+
+body.video-active #bg-video {
+    opacity: 1;
+    display: block; 
+}
+
+
+
+body.video-active::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 0;       
+}
+
+
+
+#exit-video-btn {
+    position: fixed;
+    top: 20px; 
+    right: 20px; 
+    z-index: 10; 
+    
+
+    opacity: 0; 
+    pointer-events: none; 
+    
+    transition: opacity 0.5s ease;
+    
+
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: transparent; 
+}
+
+body.video-active #exit-video-btn {
+    opacity: 1;
+    pointer-events: auto; 
+    background: rgba(255, 0, 0, 0.7); 
 }
