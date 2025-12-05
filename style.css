@@ -191,8 +191,26 @@ body.video-active #exit-video-btn {
         font-size: 0.85rem;
     }
 }
-.projects{
+.projects {
     display: flex;
     justify-content: center;
+    align-items: center; 
     margin-top: 50px;
+    background-color: #cdf1f5;
+    width: 90%; 
+    max-width: 500px; 
+    padding: 15px 20px; 
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto; 
+    flex-wrap: wrap; 
+}
+
+@media (max-width: 480px) {
+    .projects {
+        width: 95%; 
+        padding: 10px 15px;
+        font-size: 0.9rem; 
+    }
 }
