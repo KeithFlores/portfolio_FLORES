@@ -195,7 +195,7 @@ body.video-active #exit-video-btn {
     display: flex;
     justify-content: center;
     align-items: center; 
-    margin-top: 50px;
+    margin-top: 10px;
     background-color: #cdf1f5;
     width: 90%; 
     max-width: 500px; 
