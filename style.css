@@ -1,15 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
     margin: 0;
     padding: 20px;
     min-height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     background: linear-gradient(270deg, #a9deea, #c8ffdc, #debcff, #ffacc5, #ffc9e2);
-    background-size: 2000% 2000%; 
+    background-size: 400% 400%; 
     animation: wave 15s linear infinite; 
+    color: #333;
+    display: flex;
+    justify-content: center;
+    transition: background 0.5s ease;
 }
 
 @keyframes wave {
@@ -18,199 +18,119 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+#main-ui {
+    width: 100%;
+    max-width: 900px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
 header {
     text-align: center;
     margin-bottom: 30px;
-    transition: opacity 0.5s ease;
 }
+
 #profile-img {
     width: 150px;
+    height: 150px;
     border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    flex: 1;
 }
 
 button {
-    padding: 10px 20px;
-    margin-top: 10px;
+    padding: 12px 24px;
+    margin: 5px;
     cursor: pointer;
     border-radius: 30px;
-    transition: box-shadow 0.40s, linear-gradient 0.40s;
     border: none;
     color: white;
-    background: linear-gradient(270deg, #0f0c29, #302b63, #24243e, #0f0c29);
+    font-weight: 600;
+    background: #24243e;
+    transition: all 0.3s ease;
 }
 
-button:hover{
-    box-shadow: 2px 2px 15px rgb(0, 0, 0);
-    background: linear-gradient(45deg, #8a2be2, #00c6ff);
-    cursor: pointer;
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    background: #6c5ce7;
 }
-
 
 body.dark {
-    background: linear-gradient(270deg, #0f0c29, #302b63, #24243e, #0f0c29);
-    background-size: 2000% 2000%;
-    animation: wave 15s linear infinite;
+    background: linear-gradient(270deg, #0f0c29, #302b63, #24243e);
     color: #f5f5f5;
 }
-.all{
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    transition: opacity 0.5s ease;
+
+body.dark .glass-card, 
+body.dark .projects {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-
+.all {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
 #bg-video {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    z-index: -1;
-    opacity: 0; 
-    pointer-events: none;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover; z-index: -1; opacity: 0;
     transition: opacity 0.5s ease;
 }
 
+body.video-active #bg-video { opacity: 1; }
 
-body.video-active #bg-video {
-    opacity: 1;
+body.video-active #main-ui {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.95);
 }
-
-body.video-active::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.2);
-    z-index: 0;
-}
-
-
-
 
 #exit-video-btn {
-    position: fixed;
-    top: 20px; 
-    right: 20px; 
-    z-index: 10; 
-    
-
-    opacity: 0; 
-    pointer-events: none; 
-    
-    transition: opacity 0.5s ease;
-    
-
-    padding: 8px 15px;
-    border-radius: 5px;
-    border: 2px solid white;
-    background: transparent; 
+    position: fixed; top: 20px; right: 20px; z-index: 100;
+    opacity: 0; pointer-events: none; transition: opacity 0.5s ease;
+    background: rgba(255, 0, 0, 0.8);
 }
 
-body.video-active #exit-video-btn {
-    opacity: 1;
-    pointer-events: auto; 
-    background: rgba(255, 0, 0, 0.7); 
+body.video-active #exit-video-btn { opacity: 1; pointer-events: auto; }
+
+.projects {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 15px;
+    max-width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: 0.3s;
 }
 
+.projects a { 
+    text-decoration: none; 
+    color: inherit; 
+    font-weight: bold; 
+    display: block;
+}
 
-
-@media (max-width: 1024px) {
-    .all {
-        flex-direction: column;  
-        gap: 30px;
-        align-items: center;
-        padding: 10px;
-    }
-    
-    header h1 {
-        font-size: 2rem;
-    }
-    
-    #course-year {
-        font-size: 1rem;
-    }
-    
-    #profile-img {
-        width: 120px;
-    }
-    
-    button {
-        padding: 8px 16px;
-        font-size: 0.95rem;
-    }
+.projects:hover { 
+    background: #6c5ce7; 
+    color: white !important; 
+    transform: translateY(-3px); 
 }
 
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-    
-    #course-year {
-        font-size: 0.95rem;
-    }
-    
-    #profile-img {
-        width: 100px;
-    }
-    
-    .all {
-        gap: 20px;
-    }
-    
-    button {
-        padding: 7px 14px;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-    
-    #course-year {
-        font-size: 0.85rem;
-    }
-    
-    #profile-img {
-        width: 80px;
-    }
-    
-    .all {
-        gap: 15px;
-    }
-    
-    button {
-        padding: 6px 12px;
-        font-size: 0.85rem;
-    }
-}
-.projects {
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    margin-top: 10px;
-    background-color: #cdf1f5;
-    width: 90%; 
-    max-width: 500px; 
-    padding: 15px 20px; 
-    border: 1px solid black;
-    border-radius: 5px;
-    margin-left: auto;
-    margin-right: auto; 
-    flex-wrap: wrap; 
-}
-
-@media (max-width: 480px) {
-    .projects {
-        width: 95%; 
-        padding: 10px 15px;
-        font-size: 0.9rem; 
-    }
+    .all { flex-direction: column; }
 }
