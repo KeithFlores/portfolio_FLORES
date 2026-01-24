@@ -5,53 +5,65 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Student Portfolio</title>
       <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
    </head>
    <body>
-      <video id="bg-video" loop>
+      <video id="bg-video" loop playsinline>
          <source src="c1e693e5-95db-47bd-9486-6c65ed2f8d38.mp4" type="video/mp4">
          Your browser does not support HTML5 video.
       </video>
 
       <button id="exit-video-btn">Exit Video ❌</button> 
       
-      <header>
-         <h1 id="name">Keith Flores</h1>
-         <img src="profpic.jpg" alt="Profile Picture" id="profile-img">
-         <p id="course-year">Bachelor of Science in Information Systems - 2nd Year</p>
-         <button id="theme-toggle">Switch Theme</button>
-         <button id="video-toggle">An inspirational video for future successful programmers</button>
-      </header>
+      <div id="main-ui">
+          <header>
+             <h1 id="name">Keith Flores</h1>
+             <img src="profpic.jpg" alt="Profile Picture" id="profile-img">
+             <p id="course-year">Bachelor of Science in Information Systems - 2nd Year</p>
+             <div class="header-buttons">
+                <button id="theme-toggle">Switch Theme</button>
+                <button id="video-toggle">An inspirational video for future successful programmers</button>
+             </div>
+          </header>
 
-      <div class="all">
-         <section id="achievements">
-            <h2>Achievements/Certifications</h2>
-            <ul>
-               <li>Java IT Specialist</li>
-               <li>Microsoft C# Certificate</li>
-               <li>C++ Certificate</li>
-            </ul>
-         </section>
-         <section id="projects">
-            <h2>Previous Projects</h2>
-            <ul>
-               <li>C#-based PMS System</li>
-               <li>Unity-based Augmented Reality for Architects</li>
-               <li>Java-based Gym Monitoring System</li>
-            </ul>
-         </section>
-      </div>
+          <div class="all">
+             <section id="achievements" class="glass-card">
+                <h2>Achievements/Certifications</h2>
+                <ul>
+                   <li>Java IT Specialist</li>
+                   <li>Microsoft C# Certificate</li>
+                   <li>C++ Certificate</li>
+                </ul>
+             </section>
+             <section id="projects-list" class="glass-card">
+                <h2>Previous Projects</h2>
+                <ul>
+                   <li>C#-based PMS System</li>
+                   <li>Unity-based Augmented Reality for Architects</li>
+                   <li>Java-based Gym Monitoring System</li>
+                </ul>
+             </section>
+          </div>
 
-      <div class="projects">
-        <div class="stroke">
-             <a href="https://keithflores.github.io/css_Flores/"><div>Click this link to open Stroke Sense</div></a>
-        </div>    
+          <div class="projects-container">
+              <div class="projects featured">
+                <div class="stroke">
+                     <a href="https://cineview-five.vercel.app/" target="_blank"><div>Click to open CineView</div></a>
+                </div>    
+              </div>
+
+              <div class="projects">
+                <div class="stroke">
+                     <a href="https://keithflores.github.io/css_Flores/" target="_blank"><div>Click this link to open Stroke Sense</div></a>
+                </div>    
+              </div>
+              <div class="projects">
+                <div class="stroke">
+                     <a href="https://keithflores.github.io/FLORES-Javascript_M1-FA3/" target="_blank"><div>Click this link to open Javascript MPs</div></a>
+                </div>    
+              </div>
+          </div>
       </div>
-      <div class="projects">
-        <div class="stroke">
-             <a href="https://keithflores.github.io/FLORES-Javascript_M1-FA3/"><div>Click this link to open Javascript MPs</div></a>
-        </div>    
-      </div>
-           
 
       <script src="script.js"></script>
    </body>
